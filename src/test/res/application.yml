@@ -1,0 +1,15 @@
+contract:
+  demo:
+    identity: contract1  # 合约标识
+    version: "1.0"       # 合约版本
+baas:
+  sdk:
+    appId: 149458943658164258  # 应用ID
+    privateKeyPath: ./src/test/res/sm2_private_149458943658164258.pfx  # 证书路径
+    sslCertFilePath: ./src/test/res/ssl/server.crt    # SSL证书路径
+    sslPrivateKeyPath: ./src/test/res/ssl/server.pem  # SSL私钥路径
+  algorithm: SM2     # 签名算法，支持SM2和RSA
+  consensus: solo   # 共识方式，支持raft、pbft、kafka和solo
+  channel: business_channel    # 通道名称
+  order: 192.168.1.99:11161  # 多个地址时用英文分号";"分隔
+  peer: 192.168.1.99:12163   # 多个地址时用英文分号";"分隔
